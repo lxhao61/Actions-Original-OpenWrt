@@ -41,7 +41,7 @@ svn co https://github.com/Lienol/openwrt-package/trunk/package/kcptun package/li
 #svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray package/lienol/v2ray
 
 # lienol大passwall插件包
-git clone https://github.com/xnxy2012/luci-app-passwall.git package/lienol/luci-app-passwall
+git clone https://github.com/kenzok8/openwrt-packages.git package/lienol/luci-app-passwall
 
 # lienol其它插件
 #svn co https://github.com/Lienol/openwrt-packages/trunk/net/ipsec-tools package/lienol/ipsec-tools
@@ -50,3 +50,4 @@ git clone https://github.com/xnxy2012/luci-app-passwall.git package/lienol/luci-
 #svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-v2ray-server package/lienol/luci-app-v2ray-server
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
 svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/lienol/luci-app-smartdns
+svn co https://github.com/Lienol/openwrt/trunk/package/default-settings package/lienol/default-settings
