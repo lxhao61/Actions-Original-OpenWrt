@@ -20,7 +20,7 @@ svn co https://github.com/Lienol/openwrt/trunk/package/diy/frp package/lean/frp
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-frpc package/lean/luci-app-frpc
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/vlmcsd package/lean/vlmcsd
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-vlmcsd package/lean/luci-app-vlmcsd
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/zerotier package/lean/zerotier
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/zerotier package/lean/zerotier
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-zerotier package/lean/luci-app-zerotier
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_aliyun package/lean/ddns-scripts_aliyun
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_dnspod package/lean/ddns-scripts_dnspod
@@ -50,4 +50,3 @@ git clone https://github.com/kenzok8/openwrt-packages.git package/lienol/luci-ap
 #svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-v2ray-server package/lienol/luci-app-v2ray-server
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
 svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/lienol/luci-app-smartdns
-svn co https://github.com/Lienol/openwrt/trunk/package/default-settings package/lienol/default-settings
