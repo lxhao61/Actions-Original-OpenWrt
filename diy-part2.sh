@@ -12,10 +12,10 @@
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
 # clash插件插件(规则策略科学上网)
-#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash package/luci-app-clash
+svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash package/luci-app-clash
 
 # openclash插件(规则策略科学上网)
-svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 
 # lean插件相关
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-autoreboot package/lean/luci-app-autoreboot
@@ -35,7 +35,10 @@ svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_dnspod 
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/ipsec-tools package/lienol/ipsec-tools
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/strongswan package/lienol/strongswan
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-ipsec-vpnserver-manyusers package/lienol/luci-app-ipsec-vpnserver-manyusers
-#svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray package/lienol/v2ray
-#svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-v2ray-server package/lienol/luci-app-v2ray-server
+svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package/lienol/ipt2socks
+svn co https://github.com/Lienol/openwrt-package/trunk/package/openssl1.1 package/lienol/openssl1.1
+svn co https://github.com/Lienol/openwrt-package/trunk/package/pdnsd-alt package/lienol/pdnsd-alt
+svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray package/lienol/v2ray
+svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-v2ray-server package/lienol/luci-app-v2ray-server
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
 svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/lienol/luci-app-smartdns
