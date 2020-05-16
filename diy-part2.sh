@@ -12,7 +12,7 @@
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
 # clash插件
-git https://github.com/frainzy1477/luci-app-clash.git package/lienol/luci-app-clash
+git clone https://github.com/frainzy1477/luci-app-clash.git package/lienol/luci-app-clash
 
 # lean插件相关
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-autoreboot package/lean/luci-app-autoreboot
