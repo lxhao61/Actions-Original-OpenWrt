@@ -12,10 +12,10 @@
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
 # clash插件插件(规则策略科学上网)
-svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash package/luci-app-clash
+#svn co https://github.com/kenzok8/openwrt-packages/trunk/luci-app-clash package/luci-app-clash
 
 # openclash插件(规则策略科学上网)
-#svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
+svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 
 # lean插件相关
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-autoreboot package/lean/luci-app-autoreboot
