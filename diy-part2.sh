@@ -17,6 +17,24 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # openclash插件(规则策略科学上网)
 #svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
 
+# kenzok8大整理的插件包（含lienol大的passwall与lean大的ssr-plus等）
+git clone https://github.com/kenzok8/openwrt-packages.git package/lienol
+
+# lienol大的passwall依赖
+svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/lienol/brook
+svn co https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng package/lienol/chinadns-ng
+svn co https://github.com/Lienol/openwrt-package/trunk/package/dns2socks package/lienol/dns2socks
+svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package/lienol/ipt2socks
+svn co https://github.com/Lienol/openwrt-package/trunk/package/kcptun package/lienol/kcptun
+svn co https://github.com/Lienol/openwrt-package/trunk/package/openssl1.1 package/lienol/openssl1.1
+svn co https://github.com/Lienol/openwrt-package/trunk/package/pdnsd-alt package/lienol/pdnsd-alt
+svn co https://github.com/Lienol/openwrt-package/trunk/package/shadowsocksr-libev package/lienol/shadowsocksr-libev
+svn co https://github.com/Lienol/openwrt-package/trunk/package/simple-obfs package/lienol/simple-obfs
+svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/lienol/tcping
+svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan package/lienol/trojan
+svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray-plugin package/lienol/v2ray-plugin
+svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray package/lienol/v2ray
+
 # lean插件相关
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-autoreboot package/lean/luci-app-autoreboot
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-syncdial package/lean/luci-app-syncdial
@@ -37,21 +55,3 @@ svn co https://github.com/Lienol/openwrt-packages/trunk/net/strongswan package/l
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-ipsec-vpnserver-manyusers package/lienol/luci-app-ipsec-vpnserver-manyusers
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
 svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/lienol/luci-app-smartdns
-
-# lienol大的passwall依赖
-svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/lienol/brook
-svn co https://github.com/Lienol/openwrt-package/trunk/package/chinadns-ng package/lienol/chinadns-ng
-svn co https://github.com/Lienol/openwrt-package/trunk/package/dns2socks package/lienol/dns2socks
-svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package/lienol/ipt2socks
-svn co https://github.com/Lienol/openwrt-package/trunk/package/kcptun package/lienol/kcptun
-svn co https://github.com/Lienol/openwrt-package/trunk/package/openssl1.1 package/lienol/openssl1.1
-svn co https://github.com/Lienol/openwrt-package/trunk/package/pdnsd-alt package/lienol/pdnsd-alt
-svn co https://github.com/Lienol/openwrt-package/trunk/package/shadowsocksr-libev package/lienol/shadowsocksr-libev
-svn co https://github.com/Lienol/openwrt-package/trunk/package/simple-obfs package/lienol/simple-obfs
-svn co https://github.com/Lienol/openwrt-package/trunk/package/tcping package/lienol/tcping
-svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan package/lienol/trojan
-svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray-plugin package/lienol/v2ray-plugin
-svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray package/lienol/v2ray
-
-# kenzok8大整理的插件包（含lienol大的passwall与lean大的ssr-plus等）
-git clone https://github.com/kenzok8/openwrt-packages.git package/lienol
