@@ -12,7 +12,7 @@
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 
 # kenzok8大整理的插件包（含lienol大的passwall与lean大的ssr-plus等）
-git clone https://github.com/kenzok8/openwrt-packages.git package/lienol
+#git clone https://github.com/kenzok8/openwrt-packages.git package/lienol
 
 # lienol大的passwall依赖
 svn co https://github.com/Lienol/openwrt-package/trunk/package/brook package/lienol/brook
