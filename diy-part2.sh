@@ -50,4 +50,4 @@ svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-ipsec-vpn
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
 svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/lienol/luci-app-smartdns
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-guest-wifi package/lienol/luci-app-guest-wifi
-svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-v2ray-server package/lienol/luci-app-v2ray-server
+#svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-v2ray-server package/lienol/luci-app-v2ray-server
