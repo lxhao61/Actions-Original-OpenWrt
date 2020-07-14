@@ -53,7 +53,7 @@ svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-zerotier pa
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_aliyun package/lean/ddns-scripts_aliyun
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_dnspod package/lean/ddns-scripts_dnspod
 
-# lean插件临时
+# 临时插件
 svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin package/lean/v2ray-plugin
 svn co https://github.com/coolsnowwolf/packages/trunk/net/smartdns package/lean/smartdns
 svn co https://github.com/Lienol/openwrt/trunk/package/default-settings package/default-settings
