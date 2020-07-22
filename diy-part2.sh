@@ -24,7 +24,7 @@ svn co https://github.com/Lienol/openwrt-package/trunk/package/ipt2socks package
 svn co https://github.com/Lienol/openwrt-package/trunk/package/pdnsd-alt package/lienol/pdnsd-alt
 svn co https://github.com/Lienol/openwrt-package/trunk/package/kcptun package/lienol/kcptun
 svn co https://github.com/Lienol/openwrt-package/trunk/package/shadowsocksr-libev package/lienol/shadowsocksr-libev
-#svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray-plugin package/lienol/v2ray-plugin
+svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray-plugin package/lienol/v2ray-plugin
 svn co https://github.com/Lienol/openwrt-package/trunk/package/simple-obfs package/lienol/simple-obfs
 svn co https://github.com/Lienol/openwrt-package/trunk/package/v2ray package/lienol/v2ray
 svn co https://github.com/Lienol/openwrt-package/trunk/package/trojan package/lienol/trojan
@@ -35,7 +35,7 @@ svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-passwall 
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/ipsec-tools package/lienol/ipsec-tools
 svn co https://github.com/Lienol/openwrt-packages/trunk/net/strongswan package/lienol/strongswan
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-ipsec-vpnserver-manyusers package/lienol/luci-app-ipsec-vpnserver-manyusers
-#svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/lienol/smartdns
 svn co https://github.com/Lienol/openwrt-luci/trunk/applications/luci-app-smartdns package/lienol/luci-app-smartdns
 svn co https://github.com/Lienol/openwrt-package/trunk/lienol/luci-app-guest-wifi package/lienol/luci-app-guest-wifi
 
@@ -54,6 +54,4 @@ svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_aliyun 
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_dnspod package/lean/ddns-scripts_dnspod
 
 # 临时插件
-svn co https://github.com/coolsnowwolf/lede/trunk/package/lean/v2ray-plugin package/lean/v2ray-plugin
-svn co https://github.com/coolsnowwolf/packages/trunk/net/smartdns package/lean/smartdns
 svn co https://github.com/Lienol/openwrt/trunk/package/default-settings package/default-settings
