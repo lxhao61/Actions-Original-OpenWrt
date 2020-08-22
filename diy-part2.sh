@@ -52,6 +52,3 @@ svn co https://github.com/Lienol/openwrt-packages/trunk/net/zerotier package/lea
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/luci-app-zerotier package/lean/luci-app-zerotier
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_aliyun package/lean/ddns-scripts_aliyun
 svn co https://github.com/Lienol/openwrt/trunk/package/lean/ddns-scripts_dnspod package/lean/ddns-scripts_dnspod
-
-# 临时插件
-svn co https://github.com/Lienol/openwrt/trunk/package/default-settings package/default-settings
