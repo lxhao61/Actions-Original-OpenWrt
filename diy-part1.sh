@@ -17,8 +17,8 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
-# 注释掉默认telephony源
-sed -i 's/^\(.*telephony\)/#&/' feeds.conf.default
+# 注释掉默认luci源
+sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 
-# 添加openwrt-18.06 telephony源
-sed -i '$a src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-18.06' feeds.conf.default
+# 添加openwrt-18.06 luci源
+sed -i '$a src-git luci https://git.openwrt.org/project/luci.git;openwrt-18.06' feeds.conf.default
