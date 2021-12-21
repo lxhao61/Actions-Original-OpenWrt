@@ -18,7 +18,7 @@
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # 注释掉默认luci源
-sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
+#sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 
 # 添加openwrt-18.06 luci源
-sed -i '$a src-git luci https://git.openwrt.org/project/luci.git;openwrt-18.06' feeds.conf.default
+#sed -i '$a src-git luci https://git.openwrt.org/project/luci.git;openwrt-18.06' feeds.conf.default
