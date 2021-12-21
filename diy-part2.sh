@@ -12,14 +12,14 @@
 
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.6.5/g' package/base-files/files/bin/config_generate
-#sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.6.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 
 # 删除原版softethervpn插件
-rm -rf feeds/packages/net/softethervpn
+#rm -rf feeds/packages/net/softethervpn
 
 # 拉取softethervpn升级插件
-svn co https://github.com/lxhao61/packages-1/trunk/net/softethervpn feeds/packages/net/softethervpn
+#svn co https://github.com/lxhao61/packages-1/trunk/net/softethervpn feeds/packages/net/softethervpn
 
 # kenzok8大整理的插件包（含lienol大的passwall与lean大的ssr-plus等）
 #git clone https://github.com/kenzok8/openwrt-packages.git package/lienol
