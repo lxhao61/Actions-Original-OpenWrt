@@ -24,7 +24,7 @@
 #sed -i '$a src-git luci https://git.openwrt.org/project/luci.git;openwrt-18.06' feeds.conf.default
 
 # 添加Lienol大 lienol源
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
+#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
 
 # 添加Lienol大 other源
 sed -i '$a src-git other https://github.com/Lienol/openwrt-package.git;other' feeds.conf.default
