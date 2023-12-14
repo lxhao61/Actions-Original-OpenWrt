@@ -43,16 +43,7 @@ svn co https://github.com/coolsnowwolf/packages/trunk/net/phtunnel package/feeds
 svn co https://github.com/OrayOS/OpenOray/trunk/luci-app-phtunnel package/feeds/luci/luci-app-phtunnel
 
 # 拉取 vlmcsd 源码
-#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
-
-# 拉取 luci-app-vlmcsd 源码
-#svn co https://github.com/immortalwrt/luci/branches/openwrt-23.05/applications/luci-app-vlmcsd package/feeds/luci/luci-app-vlmcsd
-
-# 拉取 luci-app-autoreboot 源码
-#svn co https://github.com/immortalwrt/luci/branches/openwrt-23.05/applications/luci-app-autoreboot package/feeds/luci/luci-app-autoreboot
-
-# 拉取 luci-app-vsftpd 源码
-#svn co https://github.com/immortalwrt/luci/branches/openwrt-23.05/applications/luci-app-vsftpd package/feeds/luci/luci-app-vsftpd
+svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
 
 # 拉取 msd_lite 源码
 git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
