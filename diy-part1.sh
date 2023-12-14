@@ -17,14 +17,14 @@
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
+# 注释掉默认 packages 源
+sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
+
 # 注释掉默认 luci 源
 sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 
-# 添加 immortalwrt luci 源
+# 添加 immortalwrt 大 packages 源
+sed -i '$a src-git packages https://github.com/immortalwrt/packages.git;openwrt-23.05' feeds.conf.default
+
+# 添加 immortalwrt 大 luci 源
 sed -i '$a src-git luci https://github.com/immortalwrt/luci.git;openwrt-23.05' feeds.conf.default
-
-# 添加Lienol大 lienol源
-#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
-
-# 添加Lienol大 other源
-#sed -i '$a src-git other https://github.com/Lienol/openwrt-package.git;other' feeds.conf.default
