@@ -51,6 +51,9 @@ svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd
 # 拉取 luci-app-vlmcsd 源码
 svn co https://github.com/immortalwrt/luci/branches/openwrt-23.05/applications/luci-app-vlmcsd package/feeds/luci/luci-app-vlmcsd
 
+# 拉取 luci-app-vsftpd 源码
+svn co https://github.com/immortalwrt/luci/branches/openwrt-23.05/applications/luci-app-vsftpd package/feeds/luci/luci-app-vsftpd
+
 # 拉取 msd_lite 源码
 git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/feeds/luci/luci-app-msd_lite
