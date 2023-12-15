@@ -43,7 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 #svn co https://github.com/OrayOS/OpenOray/trunk/luci-app-phtunnel package/feeds/luci/luci-app-phtunnel
 
 # 拉取 vlmcsd 源码
-svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
+#svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
 
 # 拉取 msd_lite 源码
 git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
