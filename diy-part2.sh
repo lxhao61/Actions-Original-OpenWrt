@@ -34,7 +34,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
 
 # 拉取 luci-app-autoreboot 源码
-git clone https://github.com/ZHOUJUNX/luci-app-autoreboot.git package/feeds/luci/luci-app-autoreboot
+git clone https://github.com/liammazy-zz/app-autoreboot.git package/feeds/luci/luci-app-autoreboot
+#git clone https://github.com/moyu2018/luci-app-autoreboot.git package/feeds/luci/luci-app-autoreboot
 
 # 拉取 phtunnel、pgyvpn 源码
 #git clone https://github.com/OrayOS/OpenOray.git package/feeds/OpenOray
@@ -49,7 +50,9 @@ git clone https://github.com/ZHOUJUNX/luci-app-autoreboot.git package/feeds/luci
 svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
 
 # 拉取 luci-app-vlmcsd 源码
-git clone https://github.com/zlg98/luci-app-vlmcsd.git package/feeds/luci/luci-app-vlmcsd
+#git clone https://github.com/zlg98/luci-app-vlmcsd.git package/feeds/luci/luci-app-vlmcsd
+git clone https://github.com/dgyangxf2023/luci-app-vlmcsd.git package/feeds/luci/luci-app-vlmcsd
+#git clone https://github.com/xsmzhzy/luci-app-vlmcsd.git package/feeds/luci/luci-app-vlmcsd
 
 # 拉取 msd_lite 源码
 git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
