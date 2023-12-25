@@ -35,7 +35,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 
 # 拉取 luci-app-autoreboot 源码
 #git clone https://github.com/liammazy-zz/app-autoreboot.git package/feeds/luci/luci-app-autoreboot
-#svn co https://github.com/Lienol/openwrt-package/branches/other/lean/luci-app-autoreboot package/feeds/luci/luci-app-autoreboot
+svn co https://github.com/Lienol/openwrt-package/branches/other/lean/luci-app-autoreboot package/feeds/luci/luci-app-autoreboot
 
 # 拉取 phtunnel、pgyvpn 源码
 #git clone https://github.com/OrayOS/OpenOray.git package/feeds/OpenOray
@@ -48,11 +48,11 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 
 # 拉取 vlmcsd 源码
 #svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
-#svn co https://github.com/Lienol/openwrt-package/branches/other/lean/vlmcsd package/feeds/packages/vlmcsd
+svn co https://github.com/Lienol/openwrt-package/branches/other/lean/vlmcsd package/feeds/packages/vlmcsd
 
 # 拉取 luci-app-vlmcsd 源码
 #git clone https://github.com/zlg98/luci-app-vlmcsd.git package/feeds/luci/luci-app-vlmcsd
-#svn co https://github.com/Lienol/openwrt-package/branches/other/lean/luci-app-vlmcsd package/feeds/luci/luci-app-vlmcsd
+svn co https://github.com/Lienol/openwrt-package/branches/other/lean/luci-app-vlmcsd package/feeds/luci/luci-app-vlmcsd
 
 # 拉取 msd_lite 源码
 git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
