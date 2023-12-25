@@ -22,3 +22,7 @@
 
 # 添加修改后 luci 源
 #sed -i '$a src-git luci https://github.com/lxhao61/luci.git;openwrt-23.05' feeds.conf.default
+
+# 添加 lienol 大的 package 源
+sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
+sed -i '$a src-git other https://github.com/Lienol/openwrt-package.git;other' feeds.conf.default
