@@ -33,6 +33,12 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # 拉取 ShadowSocksR Plus+ 源码
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
 
+# 提取 fullconenat-nft 源码
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package/network/utils/fullconenat-nft package/network/utils/fullconenat-nft
+
+# 提取 fullconenat 源码
+svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package/network/utils/fullconenat package/network/utils/fullconenat
+
 # 拉取 luci-app-autoreboot 源码
 #git clone https://github.com/liammazy-zz/app-autoreboot.git package/feeds/luci/luci-app-autoreboot
 #svn co https://github.com/Lienol/openwrt-package/branches/other/lean/luci-app-autoreboot package/feeds/luci/luci-app-autoreboot
