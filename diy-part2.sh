@@ -10,6 +10,11 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# 选择最新的稳定版本（切换分支）
+git branch -a
+git tag
+git checkout v23.05.2
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
