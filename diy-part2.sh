@@ -43,15 +43,6 @@ svn co https://github.com/immortalwrt/immortalwrt/branches/openwrt-23.05/package
 #git clone https://github.com/liammazy-zz/app-autoreboot.git package/feeds/luci/luci-app-autoreboot
 #svn co https://github.com/Lienol/openwrt-package/branches/other/lean/luci-app-autoreboot package/feeds/luci/luci-app-autoreboot
 
-# 拉取 phtunnel、pgyvpn 源码
-#git clone https://github.com/OrayOS/OpenOray.git package/feeds/OpenOray
-
-# 提取 phtunnel 源码
-#svn co https://github.com/coolsnowwolf/packages/trunk/net/phtunnel package/feeds/packages/phtunnel
-
-# 提取 luci-app-phtunnel 源码
-#svn co https://github.com/OrayOS/OpenOray/trunk/luci-app-phtunnel package/feeds/luci/luci-app-phtunnel
-
 # 拉取 vlmcsd 源码
 #svn co https://github.com/immortalwrt/packages/branches/openwrt-23.05/net/vlmcsd package/feeds/packages/vlmcsd
 #svn co https://github.com/Lienol/openwrt-package/branches/other/lean/vlmcsd package/feeds/packages/vlmcsd
