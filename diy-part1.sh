@@ -16,9 +16,12 @@
 #git pull
 
 # 选择最新的稳定版本（切换分支）
-git branch -a
-git tag
-git checkout v23.05.2
+#git branch -a
+#git tag
+#git checkout v23.05.2
+
+# 回退源码（v23.05.2）
+git reset --hard 1c26bcb
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
