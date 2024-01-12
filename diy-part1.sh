@@ -16,7 +16,7 @@
 git checkout v23.05.2
 
 # 回退源码
-#git reset --hard 1c26bcb #切换到标签v23.05.2
+#git reset --hard 1c26bcb #等同于切换到标签v23.05.2
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
