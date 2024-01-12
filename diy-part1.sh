@@ -10,15 +10,8 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
-# 下载代码
-#git clone https://github.openwrt/openwrt.git
-#cd openwrt
-#git pull
-
-# 切换分支
-#git branch -a
 # 查看所有标签
-git tag
+#git tag
 # 切换到标签v23.05.2
 git checkout v23.05.2
 
