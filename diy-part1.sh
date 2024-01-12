@@ -15,13 +15,15 @@
 #cd openwrt
 #git pull
 
-# 选择最新的稳定版本（切换分支）
+# 切换分支
 #git branch -a
+# 查看所有标签
 #git tag
+# 切换到标签v23.05.2
 git checkout v23.05.2
 
-# 回退源码（v23.05.2）
-#git reset --hard 1c26bcb
+# 回退源码
+#git reset --hard 1c26bcb #切换到标签v23.05.2
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
