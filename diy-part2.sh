@@ -20,21 +20,9 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # 拉取 golang 源码
 #git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
-# 删除自带 hysteria 源码
-#rm -rf feeds/packages/net/hysteria
-#rm -rf package/feeds/packages/hysteria
-
-# 删除自带 v2ray-geodata 源码
-#rm -rf feeds/packages/net/v2ray-geodata
-#rm -rf package/feeds/packages/v2ray-geodata
-
 # 删除自带 xray-core 源码
 rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
-
-# 删除自带 luci-app-passwall 源码
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf package/feeds/luci/luci-app-passwall
 
 # 拉取 PassWall 源码
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/feeds/packages/passwall
@@ -48,12 +36,3 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 
 # 拉取 ShadowSocksR Plus+ 源码
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
-
-# 拉取 immortalwrt openwrt-23.05 源码
-git clone -b openwrt-23.05 https://github.com/immortalwrt/immortalwrt.git iwrt23
-# 提取 fullconenat-nft 源码
-cp -rf iwrt23/package/network/utils/fullconenat-nft package/network/utils/fullconenat-nft
-# 提取 fullconenat 源码
-cp -rf iwrt23/package/network/utils/fullconenat package/network/utils/fullconenat
-# 删除 immortalwrt openwrt-23.05 源码
-rm -rf iwrt23
