@@ -26,13 +26,13 @@ git checkout v23.05.2
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # 注释掉默认 packages 源
-sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
+#sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
 
 # 添加 packages 源
-sed -i '$a src-git packages https://github.com/immortalwrt/packages.git;openwrt-23.05' feeds.conf.default
+#sed -i '$a src-git packages https://github.com/immortalwrt/packages.git;openwrt-23.05' feeds.conf.default
 
 # 注释掉默认 luci 源
-sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
+#sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 
 # 添加 luci 源
-sed -i '$a src-git luci https://github.com/immortalwrt/luci.git;openwrt-23.05' feeds.conf.default
+#sed -i '$a src-git luci https://github.com/immortalwrt/luci.git;openwrt-23.05' feeds.conf.default
