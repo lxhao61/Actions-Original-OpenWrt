@@ -38,5 +38,5 @@ git checkout v22.03.6
 #sed -i '$a src-git luci https://github.com/Lienol/openwrt-luci.git;22.03' feeds.conf.default
 
 # 添加 lienol 大的 package 源
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
+#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
 #sed -i '$a src-git other https://github.com/Lienol/openwrt-package.git;other' feeds.conf.default
