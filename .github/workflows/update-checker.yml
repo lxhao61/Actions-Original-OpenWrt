@@ -12,8 +12,8 @@
 name: Update Checker
 
 env:
-  REPO_URL: https://github.com/immortalwrt/luci.git
-  REPO_BRANCH: openwrt-23.05
+  REPO_URL: https://github.com/xiaorouji/openwrt-passwall.git
+  REPO_BRANCH: main
 
 on:
   workflow_dispatch:
