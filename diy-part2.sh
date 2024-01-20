@@ -21,12 +21,16 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 #git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
 # 删除自带 hysteria 源码
-#rm -rf feeds/packages/net/hysteria
-#rm -rf package/feeds/packages/hysteria
+rm -rf feeds/packages/net/hysteria
+rm -rf package/feeds/packages/hysteria
+
+# 删除自带 gn 源码
+rm -rf feeds/packages/devel/gn
+rm -rf package/feeds/packages/gn
 
 # 删除自带 v2ray-geodata 源码
-#rm -rf feeds/packages/net/v2ray-geodata
-#rm -rf package/feeds/packages/v2ray-geodata
+rm -rf feeds/packages/net/v2ray-geodata
+rm -rf package/feeds/packages/v2ray-geodata
 
 # 删除自带 xray-core 源码
 rm -rf feeds/packages/net/xray-core
