@@ -43,7 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 #git clone https://github.com/OrayOS/OpenOray.git package/feeds/OpenOray
 
 # 拉取 msd_lite、luci-app-msd_lite 源码
-git clone https://github.com/ywt114/luci-app-msd_lite.git package/feeds/luci-app-msd_lite
+git clone https://github.com/CHDman/luci-app-msd_lite.git package/feeds/luci-app-msd_lite
 
 # 删除自带 tailscale 源码
 rm -rf feeds/packages/net/tailscale
