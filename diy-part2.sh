@@ -42,9 +42,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 # 拉取 phtunnel、pgyvpn 源码
 #git clone https://github.com/OrayOS/OpenOray.git package/feeds/OpenOray
 
-# 拉取 msd_lite 源码
-#git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
-#git clone https://github.com/ximiTech/luci-app-msd_lite.git package/feeds/luci/luci-app-msd_lite
+# 拉取 msd_lite、luci-app-msd_lite 源码
+git clone https://github.com/ywt114/luci-app-msd_lite.git package/feeds/luci-app-msd_lite
 
 # 删除自带 tailscale 源码
 rm -rf feeds/packages/net/tailscale
@@ -72,8 +71,8 @@ function merge_package(){
 # 提取 luci-app-autoreboot 源码
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-autoreboot lean/luci-app-autoreboot
 # 提取 msd_lite、luci-app-msd_lite 源码
-merge_package main https://github.com/kenzok8/small-package package/feeds/packages/msd_lite msd_lite
-merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-msd_lite luci-app-msd_lite
+#merge_package main https://github.com/kenzok8/small-package package/feeds/packages/msd_lite msd_lite
+#merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-msd_lite luci-app-msd_lite
 # 提取 vlmcsd、luci-app-vlmcsd 源码
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/packages/vlmcsd lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-vlmcsd lean/luci-app-vlmcsd
