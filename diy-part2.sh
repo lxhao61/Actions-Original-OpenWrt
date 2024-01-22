@@ -74,7 +74,7 @@ function merge_package(){
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages package/feeds/packages/msd_lite net/msd_lite
 #merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-msd_lite luci-app-msd_lite
 # 提取 vlmcsd、luci-app-vlmcsd 源码
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages package/feeds/packages/vlmcsd net/vlmcsd
+merge_package openwrt-21.02 https://github.com/immortalwrt/packages package/feeds/packages/vlmcsd net/vlmcsd
 #merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-vlmcsd lean/luci-app-vlmcsd
 # 提取 tailscale 源码
 merge_package main https://github.com/kenzok8/small-package feeds/packages/net/tailscale tailscale
