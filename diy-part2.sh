@@ -69,14 +69,14 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 luci-app-autoreboot 源码
-merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-autoreboot lean/luci-app-autoreboot
+#merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-autoreboot lean/luci-app-autoreboot
 # 提取 msd_lite、luci-app-msd_lite 源码
-#merge_package main https://github.com/kenzok8/small-package package/feeds/packages/msd_lite msd_lite
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages package/feeds/packages/msd_lite net/msd_lite
 #merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-msd_lite luci-app-msd_lite
 # 提取 vlmcsd、luci-app-vlmcsd 源码
-merge_package other https://github.com/lxhao61/openwrt-package package/feeds/packages/vlmcsd lean/vlmcsd
-merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-vlmcsd lean/luci-app-vlmcsd
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages package/feeds/packages/vlmcsd net/vlmcsd
+#merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-vlmcsd lean/luci-app-vlmcsd
 # 提取 tailscale 源码
 merge_package main https://github.com/kenzok8/small-package feeds/packages/net/tailscale tailscale
 # 提取 luci-app-socat 源码
-merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-socat luci-app-socat
+#merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-socat luci-app-socat
