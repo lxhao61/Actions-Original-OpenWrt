@@ -24,6 +24,14 @@ git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/l
 rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
 
+# 删除自带 luci-app-samba 源码
+rm -rf feeds/luci/applications/luci-app-samba
+rm -rf package/feeds/luci/luci-app-samba
+
+# 删除自带 luci-app-turboacc 源码
+rm -rf feeds/luci/applications/luci-app-turboacc
+rm -rf package/feeds/luci/luci-app-turboacc
+
 # 拉取 passwall-packages 源码
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/feeds/packages/passwall
 #cd package/feeds/packages/passwall
