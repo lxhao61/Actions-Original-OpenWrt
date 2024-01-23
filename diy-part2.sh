@@ -32,6 +32,10 @@ rm -rf package/feeds/other/autosamba
 rm -rf feeds/other/lean/luci-app-turboacc
 rm -rf package/feeds/other/luci-app-turboacc
 
+# 删除自带 luci-app-samba 源码
+rm -rf feeds/luci/applications/luci-app-samba
+rm -rf package/feeds/luci/luci-app-samba
+
 # 拉取 passwall-packages 源码
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/feeds/packages/passwall
 #cd package/feeds/packages/passwall
