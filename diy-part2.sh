@@ -36,14 +36,14 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 #git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
 #cd -
 
-# 拉取ShadowSocksR Plus+源码
+# 拉取 ShadowSocksR Plus+ 源码
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
 # 拉取 msd_lite 源码
 git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/feeds/luci/luci-app-msd_lite
 
-# 拉取phtunnel、pgyvpn源码
+# 拉取 phtunnel、pgyvpn 源码
 #git clone https://github.com/OrayOS/OpenOray.git package/OpenOray
 
 # 删除自带 tailscale 源码
