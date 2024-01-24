@@ -15,23 +15,23 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 #sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 
 # 删除自带 golang 源码
-rm -rf feeds/packages/lang/golang
+#rm -rf feeds/packages/lang/golang
 
 # 拉取 golang 源码
-git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
+#git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
 # 删除自带 xray-core 源码
-rm -rf feeds/packages/net/xray-core
-rm -rf package/feeds/packages/xray-core
+#rm -rf feeds/packages/net/xray-core
+#rm -rf package/feeds/packages/xray-core
 
 # 拉取 passwall-packages 源码
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/feeds/packages/passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/feeds/packages/passwall
 #cd package/feeds/packages/passwall
 #git checkout c189a68728d6bb65d9fb4b47fdacea3ba970a624
 #cd -
 
 # 拉取 luci-app-passwall 源码
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/luci-app-passwall
+#git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/luci-app-passwall
 #cd package/feeds/luci/luci-app-passwall
 #git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
 #cd -
@@ -73,6 +73,6 @@ function merge_package(){
 #merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages/vlmcsd lean/vlmcsd
 #merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci/luci-app-vlmcsd lean/luci-app-vlmcsd
 # 提取 tailscale 源码
-merge_package main https://github.com/kenzok8/small-package package/feeds/net/tailscale tailscale
+#merge_package main https://github.com/kenzok8/small-package package/feeds/net/tailscale tailscale
 # 提取 luci-app-socat 源码
 #merge_package main https://github.com/kenzok8/small-package package/feeds/luci/luci-app-socat luci-app-socat
