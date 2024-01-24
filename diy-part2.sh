@@ -70,7 +70,6 @@ rm -rf package/passwall/packages/naiveproxy
 
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
-#rm -rf package/feeds/packages/tailscale
 
 # 筛选程序
 function merge_package(){
