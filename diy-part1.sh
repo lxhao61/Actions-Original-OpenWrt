@@ -13,7 +13,7 @@
 # 查看所有标签
 #git tag
 # 切换到标签v22.03.6
-git checkout v22.03.6
+#git checkout v22.03.6
 
 # 回退源码
 #git reset --hard f372b71 #等同于切换到标签v22.03.6
@@ -32,10 +32,10 @@ git checkout v22.03.6
 #sed -i '$a src-git packages https://github.com/Lienol/openwrt-packages.git;22.03' feeds.conf.default
 
 # 注释掉默认 luci 源
-sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
+#sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 
 # 添加 luci 源
-sed -i '$a src-git luci https://github.com/lxhao61/luci.git;openwrt-22.03' feeds.conf.default
+#sed -i '$a src-git luci https://github.com/lxhao61/luci.git;openwrt-22.03' feeds.conf.default
 #sed -i '$a src-git luci https://github.com/Lienol/openwrt-luci.git;22.03' feeds.conf.default
 
 # 添加 lienol 大的 package 源
