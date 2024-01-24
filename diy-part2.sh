@@ -32,8 +32,8 @@ rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
 
 # 删除自带 autosamba
-#rm -rf feeds/other/lean/autosamba
-#rm -rf package/feeds/other/autosamba
+rm -rf feeds/other/lean/autosamba
+rm -rf package/feeds/other/autosamba
 
 # 删除自带 luci-app-turboacc
 rm -rf feeds/other/lean/luci-app-turboacc
@@ -59,8 +59,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
 # 拉取 msd_lite
-git clone https://github.com/ximiTech/msd_lite.git package/feeds/packages/msd_lite
-git clone https://github.com/ximiTech/luci-app-msd_lite.git package/feeds/luci/luci-app-msd_lite
+git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
+git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
 
 # 拉取 phtunnel、pgyvpn
 #git clone https://github.com/OrayOS/OpenOray.git package/OpenOray
