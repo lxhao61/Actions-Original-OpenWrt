@@ -91,6 +91,6 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 naiveproxy
-merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages/naiveproxy net/naiveproxy
+merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
-merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net/tailscale tailscale
+merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
