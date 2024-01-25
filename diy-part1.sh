@@ -24,13 +24,13 @@ git checkout v22.03.6
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 
-# 注释掉默认 packages
+# 注释默认 packages
 sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
 
 # 添加 packages
 sed -i '$a src-git packages https://github.com/Lienol/openwrt-packages.git;22.03' feeds.conf.default
 
-# 注释掉默认 luci
+# 注释默认 luci
 sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 
 # 添加 luci
