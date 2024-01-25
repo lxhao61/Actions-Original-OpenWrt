@@ -92,5 +92,8 @@ function merge_package(){
 }
 # 提取 naiveproxy
 merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+# 提取 phtunnel、luci-app-phtunnel
+merge_package master https://github.com/coolsnowwolf/packages.git package/phtunnel net/phtunnel
+merge_package main https://github.com/OrayOS/OpenOray.git package/phtunnel luci-app-phtunnel
 # 提取 tailscale
 merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
