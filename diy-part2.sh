@@ -27,18 +27,14 @@ rm -rf feeds/packages/lang/golang
 # 拉取 golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
-# 删除自带 xray-core
-#rm -rf feeds/packages/net/xray-core
-#rm -rf package/feeds/packages/xray-core
-
 # 拉取 passwall-packages
-#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
 #git checkout c189a68728d6bb65d9fb4b47fdacea3ba970a624
 #cd -
 
 # 拉取 luci-app-passwall
-#git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci-app-passwall
 #cd package/passwall/luci-app-passwall
 #git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
 #cd -
@@ -47,11 +43,14 @@ git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/l
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
 # 拉取 msd_lite
-#git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
-#git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
+git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
+git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
 
 # 删除 passwall-packages 中 naiveproxy
-#rm -rf package/passwall/packages/naiveproxy
+rm -rf package/passwall/packages/naiveproxy
+
+# 删除自带 toplevel.mk
+rm -rf include/toplevel.mk
 
 # 筛选程序
 function merge_package(){
@@ -73,6 +72,8 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 naiveproxy
-#merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
 merge_package main https://github.com/kenzok8/small-package.git package/feeds/packages tailscale
+# 提取 toplevel.mk
+merge_package 19.07 https://github.com/Lienol/openwrt.git include include/toplevel.mk
