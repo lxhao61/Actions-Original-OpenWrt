@@ -53,6 +53,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
 #cd -
 
+# 删除 passwall-packages 中 naiveproxy
+rm -rf package/passwall/packages/naiveproxy
+
 # 拉取 ShadowSocksR Plus+
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
 
