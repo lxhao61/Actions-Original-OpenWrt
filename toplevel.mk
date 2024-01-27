@@ -1,10 +1,6 @@
-# Makefile for OpenWrt
+# SPDX-License-Identifier: GPL-2.0-only
 #
-# Copyright (C) 2007-2012 OpenWrt.org
-#
-# This is free software, licensed under the GNU General Public License v2.
-# See /LICENSE for more information.
-#
+# Copyright (C) 2007-2020 OpenWrt.org
 
 PREP_MK= OPENWRT_BUILD= QUIET=0
 
@@ -100,20 +96,13 @@ prepare-tmpinfo: FORCE
 	fi
 
 ifneq ($(DISTRO_PKG_CONFIG),)
-scripts/config/mconf: export PATH:=$(dir $(DISTRO_PKG_CONFIG)):$(PATH)
+scripts/config/%onf: export PATH:=$(dir $(DISTRO_PKG_CONFIG)):$(PATH)
 endif
-scripts/config/mconf:
-	@$(_SINGLE)$(SUBMAKE) -s -C scripts/config all CC="$(HOSTCC_WRAPPER)"
+scripts/config/%onf: CFLAGS+= -O2
+scripts/config/%onf:
+	@$(_SINGLE)$(SUBMAKE) -s -C scripts/config $(notdir $@) CC="$(HOSTCC_WRAPPER)"
 
 $(eval $(call rdep,scripts/config,scripts/config/mconf))
-
-scripts/config/qconf:
-	@$(_SINGLE)$(SUBMAKE) -s -C scripts/config qconf \
-		CC="$(HOSTCC_WRAPPER)" \
-		DISTRO-PKG-CONFIG="$(DISTRO_PKG_CONFIG)"
-
-scripts/config/conf:
-	@$(_SINGLE)$(SUBMAKE) -s -C scripts/config conf CC="$(HOSTCC_WRAPPER)"
 
 config: scripts/config/conf prepare-tmpinfo FORCE
 	[ -L .config ] && export KCONFIG_OVERWRITECONFIG=1; \
@@ -138,6 +127,13 @@ oldconfig: scripts/config/conf prepare-tmpinfo FORCE
 		$< --$(if $(confdefault),$(confdefault),old)config Config.in
 
 menuconfig: scripts/config/mconf prepare-tmpinfo FORCE
+	if [ \! -e .config -a -e $(HOME)/.openwrt/defconfig ]; then \
+		cp $(HOME)/.openwrt/defconfig .config; \
+	fi
+	[ -L .config ] && export KCONFIG_OVERWRITECONFIG=1; \
+		$< Config.in
+
+nconfig: scripts/config/nconf prepare-tmpinfo FORCE
 	if [ \! -e .config -a -e $(HOME)/.openwrt/defconfig ]; then \
 		cp $(HOME)/.openwrt/defconfig .config; \
 	fi
