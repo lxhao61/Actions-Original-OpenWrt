@@ -73,5 +73,13 @@ function merge_package(){
 }
 # 提取 naiveproxy
 merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
-# 提取 tailscale
+# 提取 msd_lite 源码
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages package/feeds/packages net/msd_lite
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-msd_lite
+# 提取 vlmcsd、luci-app-vlmcsd 源码
+merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages lean/vlmcsd
+merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci lean/luci-app-vlmcsd
+# 提取 tailscale 源码
 #merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
+# 提取 luci-app-socat 源码
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-socat
