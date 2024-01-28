@@ -47,7 +47,7 @@ git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
 
 # 删除 passwall-packages 中 gn
-#rm -rf package/passwall/packages/gn
+rm -rf package/passwall/packages/gn
 
 # 删除 passwall-packages 中 naiveproxy
 rm -rf package/passwall/packages/naiveproxy
@@ -71,8 +71,8 @@ function merge_package(){
     done
     cd "$rootdir"
 }
-# 提取 naiveproxy
-merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+# 提取 naiveproxy、gn
+merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy devel/gn
 # 提取 tailscale
 #merge_package main https://github.com/kenzok8/small-package.git package/feeds/packages tailscale
 merge_package master https://github.com/openwrt/packages.git package/feeds/packages net/tailscale
