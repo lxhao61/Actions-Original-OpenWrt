@@ -49,6 +49,10 @@ git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luc
 # 删除 passwall-packages 中 naiveproxy
 rm -rf package/passwall/packages/naiveproxy
 
+# 删除自带 gcc
+rm -rf feeds/packages/devel/gcc
+#rm -rf package/feeds/packages/gcc
+
 # 筛选程序
 function merge_package(){
     # 参数1是分支名,参数2是库地址。所有文件下载到指定路径。
@@ -70,6 +74,8 @@ function merge_package(){
 }
 # 提取 naiveproxy
 merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+# 提取 gcc
+merge_package 19.07 https://github.com/Lienol/openwrt-packages.git feeds/packages/devel devel/gcc
 # 提取 tailscale
-merge_package main https://github.com/kenzok8/small-package.git package/feeds/packages tailscale
-#merge_package master https://github.com/openwrt/packages.git package/feeds/packages net/tailscale
+#merge_package main https://github.com/kenzok8/small-package.git package/feeds/packages tailscale
+merge_package master https://github.com/openwrt/packages.git package/feeds/packages net/tailscale
