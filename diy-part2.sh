@@ -82,5 +82,5 @@ merge_package other https://github.com/lxhao61/openwrt-package.git package/feeds
 # 提取 tailscale
 #merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
 merge_package master https://github.com/openwrt/packages.git feeds/packages/net net/tailscale
-# 提取 luci-app-socat
-merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-socat
+# 提取 luci-app-socat、luci-app-autotimeset
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-socat luci-app-autotimeset
