@@ -47,7 +47,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
 # 删除 passwall-packages 中 naiveproxy
-rm -rf package/passwall/packages/naiveproxy
+#rm -rf package/passwall/packages/naiveproxy
 
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
@@ -72,10 +72,9 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 naiveproxy
-merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
-# 提取 msd_lite
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/feeds/packages net/msd_lite
-merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-msd_lite
+#merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+# 提取 msd_lite、luci-app-msd_lite
+merge_package main https://github.com/kenzok8/small-package.git package/msd_lite msd_lite luci-app-msd_lite
 # 提取 vlmcsd、luci-app-vlmcsd
 merge_package other https://github.com/Lienol/openwrt-package.git package/feeds/packages lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package.git package/feeds/luci lean/luci-app-vlmcsd
