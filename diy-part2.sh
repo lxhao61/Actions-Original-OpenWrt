@@ -22,27 +22,27 @@ sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
 # 删除自带 hysteria
-rm -rf feeds/packages/net/hysteria
-rm -rf package/feeds/packages/hysteria
+#rm -rf feeds/packages/net/hysteria
+#rm -rf package/feeds/packages/hysteria
 
 # 删除自带 gn
-rm -rf feeds/packages/devel/gn
-rm -rf package/feeds/packages/gn
+#rm -rf feeds/packages/devel/gn
+#rm -rf package/feeds/packages/gn
 
 # 删除自带 v2ray-geodata
-rm -rf feeds/packages/net/v2ray-geodata
-rm -rf package/feeds/packages/v2ray-geodata
+#rm -rf feeds/packages/net/v2ray-geodata
+#rm -rf package/feeds/packages/v2ray-geodata
 
 # 删除自带 xray-core
-rm -rf feeds/packages/net/xray-core
-rm -rf package/feeds/packages/xray-core
+#rm -rf feeds/packages/net/xray-core
+#rm -rf package/feeds/packages/xray-core
 
 # 删除自带 luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf package/feeds/luci/luci-app-passwall
 
 # 拉取 passwall-packages
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
+#git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
 #git checkout c189a68728d6bb65d9fb4b47fdacea3ba970a624
 #cd -
@@ -54,7 +54,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #cd -
 
 # 删除 passwall-packages 中 naiveproxy
-rm -rf package/passwall/packages/naiveproxy
+#rm -rf package/passwall/packages/naiveproxy
 
 # 拉取 ShadowSocksR Plus+
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
