@@ -46,6 +46,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
+# 拉取 msd_lite、luci-app-msd_lite
+git https://github.com/ywt114/luci-app-msd_lite.git package/msd_lite
+
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 
@@ -69,7 +72,7 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 msd_lite、luci-app-msd_lite
-merge_package main https://github.com/kenzok8/small-package.git package/msd_lite msd_lite luci-app-msd_lite
+#merge_package main https://github.com/kenzok8/small-package.git package/msd_lite msd_lite luci-app-msd_lite
 # 提取 vlmcsd、luci-app-vlmcsd
 merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci lean/luci-app-vlmcsd
