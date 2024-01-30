@@ -47,7 +47,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
 # 拉取 msd_lite、luci-app-msd_lite
-git https://github.com/ywt114/luci-app-msd_lite.git package/msd_lite
+git clone https://github.com/ywt114/luci-app-msd_lite.git package/msd_lite
 
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
