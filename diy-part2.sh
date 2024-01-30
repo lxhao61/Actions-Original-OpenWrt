@@ -34,8 +34,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pas
 #cd -
 
 # 拉取 luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci-app-passwall
-#cd package/passwall/luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+#cd package/passwall/luci
 #git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
 #cd -
 
