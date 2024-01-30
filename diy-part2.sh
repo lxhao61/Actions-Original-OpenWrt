@@ -14,6 +14,13 @@
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 
+# 修改主机名
+#sed -i "s/hostname='.*'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
+
+# 修改默认时区
+sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
+sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
+
 # 删除自带 golang 源码
 rm -rf feeds/packages/lang/golang
 
@@ -41,7 +48,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/feeds/luci/l
 
 # 删除自带 tailscale 源码
 rm -rf feeds/packages/net/tailscale
-#rm -rf package/feeds/packages/tailscale
 
 # 筛选程序
 function merge_package(){
@@ -62,14 +68,13 @@ function merge_package(){
     done
     cd "$rootdir"
 }
-# 提取 msd_lite 源码
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages package/feeds/packages net/msd_lite
-#merge_package main https://github.com/kenzok8/small-package package/feeds/luci luci-app-msd_lite
-# 提取 vlmcsd、luci-app-vlmcsd 源码
+# 提取 msd_lite、luci-app-msd_lite
+merge_package main https://github.com/kenzok8/small-package.git package/msd_lite msd_lite luci-app-msd_lite
+# 提取 vlmcsd、luci-app-vlmcsd
 merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci lean/luci-app-vlmcsd
 # 提取 tailscale
 #merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
 merge_package master https://github.com/openwrt/packages.git feeds/packages/net net/tailscale
-# 提取 luci-app-socat 源码
-#merge_package main https://github.com/kenzok8/small-package package/feeds/luci luci-app-socat
+# 提取 luci-app-socat、luci-app-autotimeset
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-socat luci-app-autotimeset
