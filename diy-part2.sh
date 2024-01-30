@@ -87,6 +87,9 @@ function merge_package(){
     done
     cd "$rootdir"
 }
+# 提取 pgyvpn、luci-app-pgyvpn
+merge_package packages-pgyvpn https://github.com/hue715/lean-packages.git package/pgyvpn net/pgyvpn
+merge_package main https://github.com/OrayOS/OpenOray.git package/pgyvpn luci-app-pgyvpn
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
