@@ -62,6 +62,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
 
+# 拉取 pgyvpn
+git clone https://github.com/RedLeavesSun/pgyvpn.git package/pgyvpn
+
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
 
@@ -88,8 +91,8 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 pgyvpn、luci-app-pgyvpn
-merge_package packages-pgyvpn https://github.com/hue715/lean-packages.git package/pgyvpn net/pgyvpn
-merge_package main https://github.com/OrayOS/OpenOray.git package/pgyvpn luci-app-pgyvpn
+#merge_package packages-pgyvpn https://github.com/hue715/lean-packages.git package/pgyvpn net/pgyvpn
+#merge_package main https://github.com/OrayOS/OpenOray.git package/pgyvpn luci-app-pgyvpn
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
