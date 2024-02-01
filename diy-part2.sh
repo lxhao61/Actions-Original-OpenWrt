@@ -28,7 +28,7 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
 
 # 删除自带 hysteria
-rm -rf feeds/packages/net/hysteria
+#rm -rf feeds/packages/net/hysteria
 
 # 删除自带 xray-core
 #rm -rf feeds/packages/net/xray-core
@@ -56,7 +56,7 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 hysteria
-merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
+#merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 # 提取 pgyvpn、luci-app-pgyvpn
 #merge_package packages-pgyvpn https://github.com/hue715/lean-packages.git package/pgyvpn net/pgyvpn
 #merge_package main https://github.com/OrayOS/OpenOray.git package/pgyvpn luci-app-pgyvpn
