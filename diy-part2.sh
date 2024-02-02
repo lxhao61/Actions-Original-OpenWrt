@@ -71,7 +71,7 @@ function merge_package(){
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 ninja
-merge_package 19.07 https://github.com/Lienol/openwrt.git package/tools tools/ninja
+#merge_package 19.07 https://github.com/Lienol/openwrt.git package/tools tools/ninja
 # 提取 tailscale
 #merge_package main https://github.com/kenzok8/small-package.git package/feeds/packages tailscale
 merge_package master https://github.com/openwrt/packages.git package/feeds/packages net/tailscale
