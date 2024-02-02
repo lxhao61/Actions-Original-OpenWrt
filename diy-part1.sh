@@ -23,20 +23,3 @@
 
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-
-# 注释默认 packages
-#sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
-
-# 添加 packages
-#sed -i '$a src-git packages https://github.com/Lienol/openwrt-packages.git;19.07' feeds.conf.default
-
-# 注释默认 luci
-#sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
-
-# 添加 luci
-#sed -i '$a src-git luci https://github.com/Lienol/openwrt-luci.git;19.07' feeds.conf.default
-
-# 添加 kenzok8 大插件
-#sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
-#sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
-#sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
