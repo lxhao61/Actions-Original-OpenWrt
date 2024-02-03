@@ -23,7 +23,6 @@ sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'
 
 # 删除自带 golang
 rm -rf feeds/packages/lang/golang
-
 # 拉取 golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
@@ -46,9 +45,13 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone -b master https://github.com/fw876/helloworld.git package/helloworld
 
+# 拉取 luci-app-socat
+git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
+
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
-
+# 删除自带 ddns-scripts
+rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 
@@ -71,6 +74,8 @@ function merge_package(){
     done
     cd "$rootdir"
 }
+# 提取 ddns-scripts
+merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 msd_lite、luci-app-msd_lite
