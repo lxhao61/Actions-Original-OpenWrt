@@ -68,6 +68,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
 
+# 删除自带 socat
+rm -rf feeds/packages/net/socat
+
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 
@@ -95,6 +98,8 @@ function merge_package(){
 #merge_package main https://github.com/OrayOS/OpenOray.git package/pgyvpn luci-app-pgyvpn
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+# 提取 socat
+merge_package openwrt-22.03 https://github.com/openwrt/packages.git feeds/packages/net net/socat
 # 提取 tailscale
 #merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
 merge_package master https://github.com/openwrt/packages.git feeds/packages/net net/tailscale
