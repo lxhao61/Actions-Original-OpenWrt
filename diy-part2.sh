@@ -13,14 +13,12 @@
 # 删除自带 autosamba
 rm -rf feeds/other/lean/autosamba
 rm -rf package/feeds/other/autosamba
-
-# 删除自带 luci-app-turboacc
-rm -rf feeds/other/lean/luci-app-turboacc
-rm -rf package/feeds/other/luci-app-turboacc
-
 # 删除自带 luci-app-samba
 rm -rf feeds/luci/applications/luci-app-samba
 rm -rf package/feeds/luci/luci-app-samba
+# 删除自带 luci-app-turboacc
+rm -rf feeds/other/lean/luci-app-turboacc
+rm -rf package/feeds/other/luci-app-turboacc
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
@@ -35,7 +33,6 @@ sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'
 
 # 删除自带 golang
 rm -rf feeds/packages/lang/golang
-
 # 拉取 golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
@@ -68,19 +65,15 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 删除自带 luci-app-socat
 rm -rf feeds/lienol/luci-app-socat
 rm -rf package/feeds/lienol/luci-app-socat
-
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
 
 # 删除自带 ddns-scripts
 rm -rf feeds/packages/net/ddns-scripts
-
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
-
 # 删除自带 socat
 rm -rf feeds/packages/net/socat
-
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 
