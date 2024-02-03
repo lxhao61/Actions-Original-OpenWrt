@@ -21,16 +21,6 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
-# 删除自带 golang
-rm -rf feeds/packages/lang/golang
-
-# 拉取 golang
-git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
-
-# 删除自带 xray-core
-rm -rf feeds/packages/net/xray-core
-rm -rf package/feeds/packages/xray-core
-
 # 删除自带 autosamba
 rm -rf feeds/other/lean/autosamba
 rm -rf package/feeds/other/autosamba
@@ -42,6 +32,16 @@ rm -rf package/feeds/other/luci-app-turboacc
 # 删除自带 luci-app-samba
 rm -rf feeds/luci/applications/luci-app-samba
 rm -rf package/feeds/luci/luci-app-samba
+
+# 删除自带 golang
+rm -rf feeds/packages/lang/golang
+
+# 拉取 golang
+git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
+
+# 删除自带 xray-core
+rm -rf feeds/packages/net/xray-core
+rm -rf package/feeds/packages/xray-core
 
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
