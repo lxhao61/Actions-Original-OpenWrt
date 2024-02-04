@@ -48,10 +48,10 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
 
-# 删除 passwall-packages 中 naiveproxy
-#rm -rf package/passwall/packages/naiveproxy
 # 删除自带 ddns-scripts
 rm -rf feeds/packages/net/ddns-scripts
+# 删除 passwall-packages 中 naiveproxy
+#rm -rf package/passwall/packages/naiveproxy
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 
