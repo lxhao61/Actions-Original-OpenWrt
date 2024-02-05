@@ -21,11 +21,11 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
-# 拉取 OpenAppFilter、luci-app-oaf
-#git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
-
 # 拉取 ShadowSocksR Plus+
 #git clone -b master https://github.com/fw876/helloworld.git package/feeds/helloworld
+
+# 拉取 OpenAppFilter、luci-app-oaf
+#git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 删除自带 hysteria
 #rm -rf feeds/packages/net/hysteria
