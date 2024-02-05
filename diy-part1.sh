@@ -22,7 +22,6 @@ git checkout v23.05.2
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
 # 注释掉默认 packages 源
 #sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
