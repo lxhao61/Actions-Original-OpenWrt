@@ -62,4 +62,5 @@ function merge_package(){
 # 提取 luci-app-passwall
 merge_package main https://github.com/xiaorouji/openwrt-passwall.git feeds/luci/applications luci-app-passwall
 # 提取 luci-app-softethervpn
-merge_package main https://github.com/kenzok8/small-package.git feeds/luci/applications luci-app-softethervpn
+merge_package main https://github.com/Lienol/openwrt-package.git feeds/luci/applications luci-app-softethervpn
+#merge_package main https://github.com/kenzok8/small-package.git feeds/luci/applications luci-app-softethervpn
