@@ -34,7 +34,7 @@ sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'
 # 删除自带 luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall
 # 删除自带 luci-app-softethervpn
-rm -rf feeds/luci/applications/luci-app-softethervpn
+#rm -rf feeds/luci/applications/luci-app-softethervpn
 
 # 筛选程序
 function merge_package(){
@@ -62,5 +62,5 @@ function merge_package(){
 # 提取 luci-app-passwall
 merge_package main https://github.com/xiaorouji/openwrt-passwall.git feeds/luci/applications luci-app-passwall
 # 提取 luci-app-softethervpn
-merge_package main https://github.com/kenzok8/small-package.git feeds/luci/applications luci-app-softethervpn
+#merge_package main https://github.com/kenzok8/small-package.git feeds/luci/applications luci-app-softethervpn
 #merge_package main https://github.com/Lienol/openwrt-package.git feeds/luci/applications luci-app-softethervpn
