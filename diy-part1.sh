@@ -35,5 +35,5 @@ sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
 sed -i '$a src-git luci https://github.com/Lienol/openwrt-luci.git^db0ddd1' feeds.conf.default
 
 # 添加 lienol 大的 package
-sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
-sed -i '$a src-git other https://github.com/Lienol/openwrt-package.git;other' feeds.conf.default
+#sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package.git;main' feeds.conf.default
+#sed -i '$a src-git other https://github.com/Lienol/openwrt-package.git;other' feeds.conf.default
