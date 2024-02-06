@@ -43,7 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #cd -
 
 # 拉取 ShadowSocksR Plus+
-#git clone -b master https://github.com/fw876/helloworld.git package/helloworld
+#git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
