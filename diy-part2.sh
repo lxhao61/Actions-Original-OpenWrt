@@ -10,6 +10,16 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
+# 删除自带 autosamba
+rm -rf feeds/other/lean/autosamba
+rm -rf package/feeds/other/autosamba
+# 删除自带 luci-app-samba
+rm -rf feeds/luci/applications/luci-app-samba
+rm -rf package/feeds/luci/luci-app-samba
+# 删除自带 luci-app-turboacc
+rm -rf feeds/other/lean/luci-app-turboacc
+rm -rf package/feeds/other/luci-app-turboacc
+
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
 #sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
@@ -20,18 +30,6 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 # 修改默认时区
 sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
-
-# 拉取 lienol 大的 package
-git clone https://github.com/Lienol/openwrt-package.git -b main package/lienol-main
-git clone https://github.com/Lienol/openwrt-package.git -b other package/lienol-other
-
-# 删除 autosamba
-rm -rf package/lienol-other/autosamba
-# 删除自带 luci-app-samba
-rm -rf feeds/luci/applications/luci-app-samba
-rm -rf package/feeds/luci/luci-app-samba
-# 删除 luci-app-turboacc
-rm -rf package/lienol-other/luci-app-turboacc
 
 # 删除自带 golang
 rm -rf feeds/packages/lang/golang
