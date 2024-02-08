@@ -25,10 +25,10 @@ git checkout v23.05.2
 
 # 注释默认 packages
 sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
-# 添加 packages
+# 添加 Immortal 大 packages
 sed -i '$a src-git packages https://github.com/immortalwrt/packages.git;openwrt-23.05' feeds.conf.default
 
 # 注释默认 luci
 sed -i 's/^\(.*luci\)/#&/' feeds.conf.default
-# 添加 luci
+# 添加 Immortal 大 luci
 sed -i '$a src-git luci https://github.com/immortalwrt/luci.git;openwrt-23.05' feeds.conf.default
