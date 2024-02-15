@@ -38,7 +38,7 @@ git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/l
 
 # 删除自带 curl
 rm -rf feeds/packages/net/curl
-# 拉取 golang
+# 拉取 curl
 git clone https://github.com/sbwml/feeds_packages_net_curl feeds/packages/net/curl
 
 # 删除自带 xray-core
