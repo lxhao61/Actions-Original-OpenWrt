@@ -62,18 +62,14 @@ git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luc
 # 拉取 OpenAppFilter、luci-app-oaf
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
-# 删除自带 luci-app-socat
-rm -rf feeds/lienol/luci-app-socat
-rm -rf package/feeds/lienol/luci-app-socat
-# 拉取 luci-app-socat
-git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
-
 # 删除自带 ddns-scripts
 rm -rf feeds/packages/net/ddns-scripts
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
 # 删除自带 socat
 rm -rf feeds/packages/net/socat
+# 删除自带 luci-app-socat
+rm -rf feeds/lienol/luci-app-socat
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 
@@ -102,7 +98,7 @@ merge_package master https://github.com/immortalwrt/packages.git feeds/packages/
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 socat
 merge_package openwrt-22.03 https://github.com/openwrt/packages.git feeds/packages/net net/socat
+# 提取 luci-app-socat
+merge_package main https://github.com/chenmozhijin/luci-app-socat.git feeds/lienol luci-app-socat
 # 提取 tailscale
 merge_package master https://github.com/openwrt/packages.git feeds/packages/net net/tailscale
-#merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
-
