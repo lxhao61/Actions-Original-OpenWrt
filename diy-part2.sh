@@ -21,11 +21,6 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
-# 删除自带 curl
-rm -rf feeds/packages/net/curl
-# 拉取 curl
-git clone https://github.com/sbwml/feeds_packages_net_curl feeds/packages/net/curl
-
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
