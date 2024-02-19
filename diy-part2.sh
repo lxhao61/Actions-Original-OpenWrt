@@ -68,6 +68,8 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 删除自带 ddns-scripts
 rm -rf feeds/packages/net/ddns-scripts
+# 删除自带 haproxy
+rm -rf feeds/packages/net/haproxy
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
 # 删除自带 socat
@@ -98,6 +100,8 @@ function merge_package(){
 }
 # 提取 ddns-scripts
 merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
+# 提取 haproxy
+merge_package openwrt-22.03 https://github.com/openwrt/packages.git feeds/packages/net net/haproxy
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 socat
