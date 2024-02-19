@@ -53,7 +53,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pas
 # 拉取 luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 cd package/passwall/luci
-git checkout ebd3355bdf2fcaa9e0c43ec0704a8d9d8cf9f658
+git checkout 35a254d6184cbf957ffe9b1abef6d812273061e3
 cd -
 
 # 拉取 ShadowSocksR Plus+
