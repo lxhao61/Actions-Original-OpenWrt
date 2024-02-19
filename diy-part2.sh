@@ -30,7 +30,7 @@ sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'
 # 删除自带 hysteria
 rm -rf feeds/packages/net/hysteria
 # 删除自带 v2ray-geodata
-rm -rf feeds/packages/net/v2ray-geodata
+#rm -rf feeds/packages/net/v2ray-geodata
 # 删除自带 xray-core
 rm -rf feeds/packages/net/xray-core
 # 删除自带 luci-app-passwall
@@ -60,7 +60,7 @@ function merge_package(){
 # 提取 hysteria
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 # 提取 v2ray-geodata
-merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net v2ray-geodata
+#merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net v2ray-geodata
 # 提取 xray-core
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net xray-core
 # 提取 luci-app-passwall
