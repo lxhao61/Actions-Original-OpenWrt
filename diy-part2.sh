@@ -46,15 +46,15 @@ rm -rf package/feeds/packages/xray-core
 
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-cd package/passwall/packages
-git checkout fed70a5113b60c96d9c8182e40770f37c83d67ba
-cd -
+#cd package/passwall/packages
+#git checkout fed70a5113b60c96d9c8182e40770f37c83d67ba
+#cd -
 
 # 拉取 luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
-#cd package/passwall/luci
-#git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
-#cd -
+cd package/passwall/luci
+git checkout ebd3355bdf2fcaa9e0c43ec0704a8d9d8cf9f658
+cd -
 
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
@@ -69,9 +69,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 删除自带 ddns-scripts
 rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 haproxy
-#rm -rf feeds/packages/net/haproxy
+rm -rf feeds/packages/net/haproxy
 # 删除 passwall-packages 中 gn
-#rm -rf package/passwall/packages/gn
+rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
 rm -rf package/passwall/packages/naiveproxy
 # 删除自带 socat
@@ -103,9 +103,9 @@ function merge_package(){
 # 提取 ddns-scripts
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
 # 提取 haproxy
-#merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/haproxy
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/haproxy
 # 提取 gn
-#merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 socat
