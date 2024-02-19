@@ -71,7 +71,7 @@ rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 haproxy
 rm -rf feeds/packages/net/haproxy
 # 删除 passwall-packages 中 gn
-#rm -rf package/passwall/packages/gn
+rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
 #rm -rf package/passwall/packages/naiveproxy
 # 删除自带 socat
