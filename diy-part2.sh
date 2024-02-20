@@ -115,6 +115,7 @@ merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/
 # 提取 socat
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/socat
 # 提取 luci-app-socat
-merge_package main https://github.com/chenmozhijin/luci-app-socat.git feeds/lienol luci-app-socat
+#merge_package main https://github.com/chenmozhijin/luci-app-socat.git feeds/lienol luci-app-socat
+merge_package openwrt-23.05 https://github.com/immortalwrt/luci.git feeds/lienol applications/luci-app-socat
 # 提取 tailscale
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
