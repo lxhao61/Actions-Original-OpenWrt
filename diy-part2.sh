@@ -21,6 +21,16 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
+# 删除自带 luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf package/feeds/luci/luci-app-passwall
+
+# 拉取 luci-app-passwall
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+#cd package/passwall/luci
+#git checkout ebd3355bdf2fcaa9e0c43ec0704a8d9d8cf9f658
+#cd -
+
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
@@ -33,8 +43,6 @@ rm -rf feeds/packages/net/hysteria
 #rm -rf feeds/packages/net/v2ray-geodata
 # 删除自带 xray-core
 rm -rf feeds/packages/net/xray-core
-# 删除自带 luci-app-passwall
-rm -rf feeds/luci/applications/luci-app-passwall
 # 删除自带 luci-app-softethervpn
 rm -rf feeds/luci/applications/luci-app-softethervpn
 
@@ -63,7 +71,5 @@ merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git fe
 #merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net v2ray-geodata
 # 提取 xray-core
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net xray-core
-# 提取 luci-app-passwall
-merge_package main https://github.com/xiaorouji/openwrt-passwall.git feeds/luci/applications luci-app-passwall
 # 提取 luci-app-softethervpn
 merge_package main https://github.com/kenzok8/small-package.git feeds/luci/applications luci-app-softethervpn
