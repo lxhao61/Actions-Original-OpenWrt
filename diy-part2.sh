@@ -49,9 +49,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
-# 拉取 luci-app-autoreboot
-git clone https://github.com/f8q8/luci-app-autoreboot.git package/feeds/luci/luci-app-autoreboot
-
 # 拉取 msd_lite、luci-app-msd_lite
 git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
 git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
