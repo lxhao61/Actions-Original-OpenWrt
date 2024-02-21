@@ -114,5 +114,3 @@ merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/pa
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/socat
 # 提取 luci-app-socat
 merge_package main https://github.com/chenmozhijin/luci-app-socat.git feeds/lienol luci-app-socat
-# 提取 msd_lite、luci-app-msd_lite
-#merge_package main https://github.com/kenzok8/small-package.git package/msd_lite msd_lite luci-app-msd_lite
