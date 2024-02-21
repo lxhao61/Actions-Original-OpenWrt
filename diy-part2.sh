@@ -50,7 +50,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
 # 拉取 luci-app-autoreboot
-git clone https://github.com/lxhao61/luci-app-autoreboot.git package/autoreboot/luci-app-autoreboot
+git clone https://github.com/moyu2018/luci-app-autoreboot.git package/autoreboot/luci-app-autoreboot
 
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
