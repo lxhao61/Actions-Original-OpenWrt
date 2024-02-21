@@ -26,6 +26,10 @@ rm -rf feeds/packages/lang/golang
 # 拉取 golang
 git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
 
+# 删除自带 v2ray-geodata
+#rm -rf feeds/packages/net/v2ray-geodata
+#rm -rf package/feeds/packages/v2ray-geodata
+
 # 删除自带 xray-core
 rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
@@ -33,13 +37,13 @@ rm -rf package/feeds/packages/xray-core
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
-#git checkout c189a68728d6bb65d9fb4b47fdacea3ba970a624
+#git checkout fed70a5113b60c96d9c8182e40770f37c83d67ba
 #cd -
 
 # 拉取 luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 #cd package/passwall/luci
-#git checkout d1e618220a9a0a4b73d536101f452a2f4cf14861
+#git checkout ebd3355bdf2fcaa9e0c43ec0704a8d9d8cf9f658
 #cd -
 
 # 拉取 ShadowSocksR Plus+
@@ -78,14 +82,13 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 ddns-scripts
-merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
 # 提取 naiveproxy
-#merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+#merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 vlmcsd、luci-app-vlmcsd
 merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci lean/luci-app-vlmcsd
 # 提取 tailscale
-#merge_package main https://github.com/kenzok8/small-package.git feeds/packages/net tailscale
-merge_package master https://github.com/openwrt/packages.git feeds/packages/net net/tailscale
-# 提取 luci-app-socat、luci-app-autotimeset
-merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-socat luci-app-autotimeset
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
+# 提取 luci-app-autotimeset
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-autotimeset
