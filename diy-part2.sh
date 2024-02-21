@@ -88,12 +88,12 @@ merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
-# 提取 luci-app-autoreboot
-merge_package main https://github.com/pppoex/openwrt-packages.git package/feeds/luci luci-app-autoreboot
+# 提取 msd_lite
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/msd_lite net/msd_lite
+# 提取 luci-app-msd_lite
+merge_package main https://github.com/kenzok8/small-package.git package/msd_lite luci-app-msd_lite
 # 提取 luci-app-autotimeset
 merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-autotimeset
-# 提取 msd_lite、luci-app-msd_lite
-merge_package main https://github.com/kenzok8/small-package.git package/msd_lite msd_lite luci-app-msd_lite
 # 提取 vlmcsd、luci-app-vlmcsd
 merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci lean/luci-app-vlmcsd
