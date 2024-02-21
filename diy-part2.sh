@@ -49,9 +49,11 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
-# 拉取 msd_lite、luci-app-msd_lite
+# 拉取 msd_lite
 git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
-git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
+
+# 拉取 luci-app-msd_lite
+#git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
 
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
@@ -103,3 +105,5 @@ merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luc
 merge_package main https://github.com/pppoex/openwrt-packages.git package/feeds/luci luci-app-autoreboot
 # 提取 luci-app-autotimeset
 merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-autotimeset
+# 提取 luci-app-msd_lite
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-msd_lite
