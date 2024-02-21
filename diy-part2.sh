@@ -49,12 +49,6 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
-# 拉取 luci-app-autoreboot
-git clone https://github.com/lxhao61/luci-app-autoreboot.git package/autoreboot/luci-app-autoreboot
-
-# 拉取 msd_lite
-git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
-
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
 
@@ -98,12 +92,12 @@ merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
-# 提取 luci-app-autoreboot
-#merge_package main https://github.com/pppoex/openwrt-packages.git package/feeds/luci luci-app-autoreboot
-# 提取 luci-app-autotimeset
-merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-autotimeset
+# 提取 msd_lite
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/msd_lite net/msd_lite
 # 提取 luci-app-msd_lite
 merge_package main https://github.com/kenzok8/small-package.git package/msd_lite luci-app-msd_lite
+# 提取 luci-app-autotimeset
+merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-autotimeset
 # 提取 vlmcsd、luci-app-vlmcsd
 merge_package other https://github.com/Lienol/openwrt-package package/feeds/packages lean/vlmcsd
 merge_package other https://github.com/lxhao61/openwrt-package package/feeds/luci lean/luci-app-vlmcsd
