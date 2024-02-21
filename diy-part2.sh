@@ -69,17 +69,17 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # 删除自带 ddns-scripts
 rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 dnsmasq
-rm -rf package/network/services/dnsmasq
+#rm -rf package/network/services/dnsmasq
 # 删除 passwall-packages 中 gn
 rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
 rm -rf package/passwall/packages/naiveproxy
+# 删除自带 tailscale
+rm -rf feeds/packages/net/tailscale
 # 删除自带 socat
 rm -rf feeds/packages/net/socat
 # 删除自带 luci-app-socat
 rm -rf feeds/lienol/luci-app-socat
-# 删除自带 tailscale
-rm -rf feeds/packages/net/tailscale
 
 # 筛选程序
 function merge_package(){
@@ -103,14 +103,14 @@ function merge_package(){
 # 提取 ddns-scripts
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
 # 提取 dnsmasq
-merge_package 22.03 https://github.com/Lienol/openwrt.git package/network/services package/network/services/dnsmasq
+#merge_package 22.03 https://github.com/Lienol/openwrt.git package/network/services package/network/services/dnsmasq
 # 提取 gn
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+# 提取 tailscale
+merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
 # 提取 socat
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/socat
 # 提取 luci-app-socat
 merge_package main https://github.com/chenmozhijin/luci-app-socat.git feeds/lienol luci-app-socat
-# 提取 tailscale
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
