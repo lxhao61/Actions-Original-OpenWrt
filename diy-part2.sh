@@ -50,7 +50,8 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
 # 拉取 msd_lite、luci-app-msd_lite
-git clone https://github.com/ywt114/luci-app-msd_lite.git package/msd_lite
+git clone https://github.com/ximiTech/msd_lite.git package/msd_lite/msd_lite
+git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luci-app-msd_lite
 
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
