@@ -49,6 +49,9 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 拉取 ShadowSocksR Plus+
 #git clone https://github.com/fw876/helloworld.git -b master package/helloworld
 
+# 拉取 luci-app-autoreboot
+git clone https://github.com/lxhao61/luci-app-autoreboot.git package/feeds/luci
+
 # 拉取 luci-app-socat
 git clone https://github.com/chenmozhijin/luci-app-socat.git package/socat
 
@@ -93,7 +96,7 @@ merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/
 # 提取 tailscale
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
 # 提取 luci-app-autoreboot
-merge_package main https://github.com/pppoex/openwrt-packages.git package/feeds/luci luci-app-autoreboot
+#merge_package main https://github.com/pppoex/openwrt-packages.git package/feeds/luci luci-app-autoreboot
 # 提取 luci-app-autotimeset
 merge_package main https://github.com/kenzok8/small-package.git package/feeds/luci luci-app-autotimeset
 # 提取 msd_lite、luci-app-msd_lite
