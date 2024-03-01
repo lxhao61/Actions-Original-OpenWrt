@@ -12,8 +12,8 @@
 
 # 查看所有标签
 #git tag
-# 切换到标签v22.03.6
-git checkout v22.03.6
+# 切换到标签v22.03.5
+git checkout v22.03.5
 
 # 回退源码
 #git reset --hard f372b71 #等同于切换到标签v22.03.6
