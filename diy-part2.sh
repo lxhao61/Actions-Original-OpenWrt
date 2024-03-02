@@ -21,6 +21,11 @@ sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generat
 sed -i "s/timezone='.*'/timezone='CST-8'/g" package/base-files/files/bin/config_generate
 sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'" package/base-files/files/bin/config_generate
 
+# 删除自带 golang
+rm -rf feeds/packages/lang/golang
+# 拉取 golang
+git clone https://github.com/sbwml/packages_lang_golang.git -b 22.x feeds/packages/lang/golang
+
 # 删除自带 luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf package/feeds/luci/luci-app-passwall
