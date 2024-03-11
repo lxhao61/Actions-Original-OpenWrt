@@ -45,7 +45,7 @@ rm -rf feeds/packages/net/xray-core
 rm -rf package/feeds/packages/xray-core
 
 # 拉取 passwall-packages
-git clone https://github.com/xiaorouji/openwrt-passwall-packages.gi package/passwall/packages
+git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
 #cd package/passwall/packages
 #git checkout fed70a5113b60c96d9c8182e40770f37c83d67ba
 #cd -
