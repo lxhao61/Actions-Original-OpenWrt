@@ -12,11 +12,11 @@
 
 # 查看所有标签
 #git tag
-# 切换到标签v23.05.2
+# 切换到标签 v23.05.3
 git checkout v23.05.3
 
 # 回退源码
-#git reset --hard 1c26bcb #等同于切换到标签v23.05.2
+#git reset --hard 1c26bcb #等同于切换到标签 v23.05.2
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
