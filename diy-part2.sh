@@ -67,7 +67,7 @@ git clone https://github.com/ximiTech/luci-app-msd_lite.git package/msd_lite/luc
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 删除自带 ddns-scripts
-rm -rf feeds/packages/net/ddns-scripts
+#rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 dnsmasq
 rm -rf package/network/services/dnsmasq
 # 删除 passwall-packages 中 gn
@@ -101,7 +101,7 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 ddns-scripts
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
+#merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
 # 提取 dnsmasq
 merge_package 22.03 https://github.com/Lienol/openwrt.git package/network/services package/network/services/dnsmasq
 # 提取 gn
