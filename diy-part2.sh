@@ -73,7 +73,7 @@ rm -rf package/network/services/dnsmasq
 # 删除 passwall-packages 中 gn
 rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
-rm -rf package/passwall/packages/naiveproxy
+#rm -rf package/passwall/packages/naiveproxy
 # 删除自带 tailscale
 rm -rf feeds/packages/net/tailscale
 # 删除自带 socat
@@ -107,7 +107,7 @@ merge_package 22.03 https://github.com/Lienol/openwrt.git package/network/servic
 # 提取 gn
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
-merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
+#merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 tailscale
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
 # 提取 socat
