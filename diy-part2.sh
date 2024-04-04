@@ -75,8 +75,8 @@ function merge_package(){
 # 提取 hysteria
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 # 提取 naiveproxy
-#merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/naiveproxy
-merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net naiveproxy
+merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/naiveproxy
+#merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net naiveproxy
 # 提取 v2ray-geodata
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net v2ray-geodata
 # 提取 xray-core
