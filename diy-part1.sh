@@ -10,6 +10,8 @@
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
 #
 
+# 查看所有标签
+#git tag
 # 切换到标签 v19.07.10
 git checkout v19.07.10
 
