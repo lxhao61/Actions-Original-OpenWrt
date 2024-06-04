@@ -46,9 +46,9 @@ rm -rf package/feeds/packages/xray-core
 
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-cd package/passwall/packages
-git checkout faac82fe180386b33cd66f410f4f4358fa1dba9b
-cd -
+#cd package/passwall/packages
+#git checkout faac82fe180386b33cd66f410f4f4358fa1dba9b
+#cd -
 
 # 拉取 luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
@@ -70,6 +70,8 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 dnsmasq
 rm -rf package/network/services/dnsmasq
+# 删除 passwall-packages 中 dns2tcp
+rm -rf package/passwall/packages/dns2tcp
 # 删除 passwall-packages 中 gn
 #rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
@@ -104,6 +106,8 @@ function merge_package(){
 merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
 # 提取 dnsmasq
 merge_package 22.03 https://github.com/Lienol/openwrt.git package/network/services package/network/services/dnsmasq
+# 提取 dns2tcp
+merge_package v5 https://github.com/sbwml/openwrt_helloworld.git package/passwall/packages dns2tcp
 # 提取 gn
 #merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
