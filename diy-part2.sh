@@ -71,7 +71,7 @@ rm -rf feeds/packages/net/ddns-scripts
 # 删除自带 dnsmasq
 rm -rf package/network/services/dnsmasq
 # 删除 passwall-packages 中 dns2tcp
-rm -rf package/passwall/packages/dns2tcp
+#rm -rf package/passwall/packages/dns2tcp
 # 删除 passwall-packages 中 gn
 #rm -rf package/passwall/packages/gn
 # 删除 passwall-packages 中 naiveproxy
@@ -107,7 +107,7 @@ merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/pa
 # 提取 dnsmasq
 merge_package 22.03 https://github.com/Lienol/openwrt.git package/network/services package/network/services/dnsmasq
 # 提取 dns2tcp
-merge_package v5 https://github.com/sbwml/openwrt_helloworld.git package/passwall/packages dns2tcp
+#merge_package v5 https://github.com/sbwml/openwrt_helloworld.git package/passwall/packages dns2tcp
 # 提取 gn
 #merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
