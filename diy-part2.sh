@@ -45,7 +45,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 删除自带 chinadns-ng
 rm -rf feeds/packages/net/chinadns-ng
 # 删除自带 hysteria
-rm -rf feeds/packages/net/hysteria
+#rm -rf feeds/packages/net/hysteria
 # 删除自带 naiveproxy
 rm -rf feeds/packages/net/naiveproxy
 # 删除自带 v2ray-geodata
@@ -78,7 +78,7 @@ function merge_package(){
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net chinadns-ng
 # 提取 hysteria
 #merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
-merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net hysteria
+#merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net hysteria
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/naiveproxy
 merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net naiveproxy
