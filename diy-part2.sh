@@ -31,7 +31,8 @@ rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf package/feeds/luci/luci-app-passwall
 
 # 拉取 luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+#git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+git clone https://github.com/lxhao61/openwrt-passwall.git package/passwall/luci
 #cd package/passwall/luci
 #git checkout c62cdc51e470d3f0db668a2b8a201c7502c192fa
 #cd -
