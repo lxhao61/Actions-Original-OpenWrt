@@ -27,12 +27,11 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang.git -b 22.x feeds/packages/lang/golang
 
 # 删除自带 luci-app-passwall
-rm -rf feeds/luci/applications/luci-app-passwall
-rm -rf package/feeds/luci/luci-app-passwall
+#rm -rf feeds/luci/applications/luci-app-passwall
+#rm -rf package/feeds/luci/luci-app-passwall
 
 # 拉取 luci-app-passwall
 #git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
-git clone https://github.com/lxhao61/openwrt-passwall.git package/passwall/luci
 #cd package/passwall/luci
 #git checkout c62cdc51e470d3f0db668a2b8a201c7502c192fa
 #cd -
@@ -44,7 +43,7 @@ git clone https://github.com/lxhao61/openwrt-passwall.git package/passwall/luci
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 删除自带 chinadns-ng
-rm -rf feeds/packages/net/chinadns-ng
+#rm -rf feeds/packages/net/chinadns-ng
 # 删除自带 hysteria
 rm -rf feeds/packages/net/hysteria
 # 删除自带 naiveproxy
@@ -76,7 +75,7 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 chinadns-ng
-merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net chinadns-ng
+#merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net chinadns-ng
 # 提取 hysteria
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 #merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net hysteria
