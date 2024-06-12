@@ -12,7 +12,7 @@
 name: Update Checker
 
 env:
-  REPO_URL: https://github.com/xiaorouji/openwrt-passwall-packages.git
+  REPO_URL: https://github.com/xiaorouji/openwrt-passwall.git
   REPO_BRANCH: main
 
 on:
