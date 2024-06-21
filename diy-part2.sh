@@ -51,7 +51,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pas
 #cd -
 
 # 拉取 luci-app-passwall
-git clone https://github.com/xiaorouji/openwrt-passwall.git -b patches-xray-core-1.8.16 package/passwall/luci
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 #cd package/passwall/luci
 #git checkout ebd3355bdf2fcaa9e0c43ec0704a8d9d8cf9f658
 #cd -
