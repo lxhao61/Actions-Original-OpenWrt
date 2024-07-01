@@ -77,7 +77,7 @@ function merge_package(){
 # 提取 chinadns-ng
 #merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net chinadns-ng
 # 提取 hysteria
-merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
+merge_package patches-hysteria-2.5.0 https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 #merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net hysteria
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git feeds/packages/net net/naiveproxy
