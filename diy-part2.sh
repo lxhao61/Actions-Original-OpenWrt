@@ -27,11 +27,11 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang.git -b 22.x feeds/packages/lang/golang
 
 # 删除自带 luci-app-passwall
-#rm -rf feeds/luci/applications/luci-app-passwall
-#rm -rf package/feeds/luci/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf package/feeds/luci/luci-app-passwall
 
 # 拉取 luci-app-passwall
-#git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
+git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
 #cd package/passwall/luci
 #git checkout c62cdc51e470d3f0db668a2b8a201c7502c192fa
 #cd -
