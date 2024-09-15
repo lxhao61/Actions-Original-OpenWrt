@@ -47,7 +47,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 # 删除自带 hysteria
 rm -rf feeds/packages/net/hysteria
 # 删除自带 naiveproxy
-rm -rf feeds/packages/net/naiveproxy
+#rm -rf feeds/packages/net/naiveproxy
 # 删除自带 v2ray-geodata
 rm -rf feeds/packages/net/v2ray-geodata
 # 删除自带 xray-core
@@ -82,7 +82,6 @@ merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git fe
 # 提取 naiveproxy
 #merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net naiveproxy
 #merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net naiveproxy
-merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 # 提取 v2ray-geodata
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net v2ray-geodata
 # 提取 xray-core
