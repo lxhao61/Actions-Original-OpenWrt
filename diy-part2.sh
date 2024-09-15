@@ -24,7 +24,7 @@ sed -i "/.*timezone='CST-8'.*/i\ set system.@system[-1].zonename='Asia/Shanghai'
 # 删除自带 golang
 rm -rf feeds/packages/lang/golang
 # 拉取 golang
-git clone https://github.com/sbwml/packages_lang_golang.git -b 22.x feeds/packages/lang/golang
+git clone https://github.com/sbwml/packages_lang_golang.git -b 23.x feeds/packages/lang/golang
 
 # 删除自带 luci-app-passwall
 rm -rf feeds/luci/applications/luci-app-passwall
