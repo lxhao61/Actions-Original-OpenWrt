@@ -46,9 +46,9 @@ rm -rf package/feeds/packages/xray-core
 
 # 拉取 passwall-packages
 git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/passwall/packages
-#cd package/passwall/packages
-#git checkout faac82fe180386b33cd66f410f4f4358fa1dba9b
-#cd -
+cd package/passwall/packages
+git checkout bc40fceb0488dfb5a4adb711cc1830a8021ee555
+cd -
 
 # 拉取 luci-app-passwall
 git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luci
