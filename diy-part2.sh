@@ -80,8 +80,8 @@ function merge_package(){
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 #merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net hysteria
 # 提取 naiveproxy
-merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net naiveproxy
-#merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net naiveproxy
+#merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net naiveproxy
+merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net naiveproxy
 # 提取 v2ray-geodata
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net v2ray-geodata
 # 提取 xray-core
