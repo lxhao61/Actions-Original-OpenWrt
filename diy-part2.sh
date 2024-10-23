@@ -43,7 +43,7 @@ git clone https://github.com/xiaorouji/openwrt-passwall.git package/passwall/luc
 #git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # 删除自带 chinadns-ng
-#rm -rf feeds/packages/net/chinadns-ng
+rm -rf feeds/packages/net/chinadns-ng
 # 删除自带 hysteria
 rm -rf feeds/packages/net/hysteria
 # 删除自带 naiveproxy
@@ -75,7 +75,7 @@ function merge_package(){
     cd "$rootdir"
 }
 # 提取 chinadns-ng
-#merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net chinadns-ng
+merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net chinadns-ng
 # 提取 hysteria
 merge_package main https://github.com/xiaorouji/openwrt-passwall-packages.git feeds/packages/net hysteria
 #merge_package v5 https://github.com/sbwml/openwrt_helloworld.git feeds/packages/net hysteria
