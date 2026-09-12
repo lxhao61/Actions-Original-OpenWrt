@@ -11,6 +11,8 @@
 #
 
 # 特殊的替换配置
+## 删除自带的 lib
+rm -rf target/linux/bcm53xx/base-files/lib
 ## 删除自带的 tailscale
 rm -rf feeds/packages/net/tailscale
 ## 删除自带的 vlmcsd
@@ -42,8 +44,14 @@ function merge_package(){
 }
 ## 提取 cpufreq
 merge_package openwrt-25.12 https://github.com/immortalwrt/immortalwrt.git package/emortal package/emortal/cpufreq
+## 提取 brcmfmac-firmware-4366c0-pcie-k3
+merge_package openwrt-25.12 https://github.com/immortalwrt/immortalwrt.git package/chajian/k3buding package/firmware/brcmfmac4366c0-firmware-k3
 ## 提取 fullconenat-nft
 merge_package openwrt-25.12 https://github.com/immortalwrt/immortalwrt.git package/network/utils package/network/utils/fullconenat-nft
+## 提取 k3wifi
+merge_package main https://github.com/Lienol/openwrt-package.git package/chajian/k3buding other/k3wifi
+## 提取 lib（修复更新固件配置丢失）
+merge_package main https://github.com/openwrt/openwrt.git target/linux/bcm53xx/base-files target/linux/bcm53xx/base-files/lib
 ## 提取 px5g-openssl
 merge_package openwrt-25.12 https://github.com/immortalwrt/immortalwrt.git package/utils package/utils/px5g-openssl
 ## 提取 tailscale（兼容如下 golang 27.x）
@@ -83,6 +91,18 @@ git clone https://github.com/Openwrt-Passwall/openwrt-passwall.git package/chaji
 # 拉取 easytier、luci-app-easytier
 git clone https://github.com/EasyTier/luci-app-easytier.git package/chajian/easytier
 
+# 删除自带的 k3screenctrl
+rm -rf feeds/packages/utils/phicomm-k3screenctrl
+rm -rf package/feeds/packages/phicomm-k3screenctrl
+# 拉取新的 k3screenctrl
+git clone https://github.com/yangxu52/k3screenctrl_build.git package/chajian/k3buding/k3screenctrl
+
+# 删除自带的 luci-app-k3screenctrl
+rm -rf feeds/luci/applications/luci-app-k3screenctrl
+rm -rf package/feeds/luci/luci-app-k3screenctrl
+# 拉取新的 luci-app-k3screenctrl
+git clone https://github.com/yangxu52/luci-app-k3screenctrl.git package/chajian/k3buding/luci-app-k3screenctrl
+
 # 拉取锐捷认证
 git clone https://github.com/sbwml/luci-app-mentohust.git package/chajian/mentohust
 
@@ -100,15 +120,31 @@ sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/package
 # 拉取 luci-app-tailscale
 git clone https://github.com/asvow/luci-app-tailscale.git package/chajian/tailscale/luci-app-tailscale
 
+# 拉取 luci-app-temp-status
+git clone https://github.com/Palatis/luci-app-temp-status.git package/chajian/status/luci-app-temp-status
+
+# 删除自带的 luci-theme-argon
+rm -rf feeds/luci/themes/luci-theme-argon
+rm -rf package/feeds/luci/luci-theme-argon
+# 删除自带的 luci-app-argon-config
+rm -rf feeds/luci/applications/luci-app-argon-config
+rm -rf package/feeds/luci/luci-app-argon-config
+# 拉取新的 luci-theme-argon
+#git clone https://github.com/jerrykuku/luci-theme-argon.git -b master package/chajian/argon/luci-theme-argon
+# 拉取新的 luci-app-argon-config
+#git clone https://github.com/jerrykuku/luci-app-argon-config.git -b master package/chajian/argon/luci-app-argon-config
+# 拉取新的 luci-theme-argon、luci-app-argon-config
+git clone https://github.com/sbwml/luci-theme-argon.git -b openwrt-25.12-legacy package/chajian/argon
+
 # 修改默认 IP
-#sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
-sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.8.1/g' package/base-files/files/bin/config_generate
 
 # 修改默认主题
-#sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci-light/Makefile
+sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci-light/Makefile
 
 # 修改主机名
-sed -i "s/hostname='.*'/hostname='D2'/g" package/base-files/files/bin/config_generate
+sed -i "s/hostname='.*'/hostname='K3'/g" package/base-files/files/bin/config_generate
 
 # 修改默认时区
 ## 创建 uci-defaults 脚本
