@@ -17,10 +17,12 @@ rm -rf feeds/packages/net/ddns-scripts
 rm -rf target/linux/bcm53xx/base-files/lib
 ## 删除自带的 tailscale
 rm -rf feeds/packages/net/tailscale
-## 删除自带的 luci-base
-rm -rf feeds/luci/modules/luci-base
 ## 删除自带的 luci-app-firewall
 rm -rf feeds/luci/applications/luci-app-firewall
+## 删除自带的 luci-base
+rm -rf feeds/luci/modules/luci-base
+## 删除自带的 luci-mod-network
+rm -rf feeds/luci/modules/luci-mod-network
 ## 筛选程序
 function merge_package(){
     # 参数1是分支名,参数2是库地址。所有文件下载到指定路径。
@@ -52,10 +54,12 @@ merge_package main https://github.com/kenzok8/jell.git package/chajian/kenzok8-p
 merge_package main https://github.com/openwrt/openwrt.git target/linux/bcm53xx/base-files target/linux/bcm53xx/base-files/lib
 ## 提取 tailscale（兼容如下 golang 27.x）
 merge_package master https://github.com/openwrt/packages.git feeds/packages/net net/tailscale
-## 提取 luci-base（如上 fullconenat-nft 需要）
-merge_package openwrt-25.12 https://github.com/immortalwrt/luci.git feeds/luci/modules modules/luci-base
 ## 提取 luci-app-firewall（如上 fullconenat-nft 需要）
 merge_package openwrt-25.12 https://github.com/immortalwrt/luci.git feeds/luci/applications applications/luci-app-firewall
+## 提取 luci-base（如上 fullconenat-nft 需要）
+merge_package openwrt-25.12 https://github.com/immortalwrt/luci.git feeds/luci/modules modules/luci-base
+## 提取 luci-mod-network
+merge_package openwrt-25.12 https://github.com/openwrt/luci.git feeds/luci/modules modules/luci-mod-network
 
 # 删除自带的 golang
 rm -rf feeds/packages/lang/golang
