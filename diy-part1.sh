@@ -15,9 +15,13 @@
 # 切换到标签 v25.12.5
 git checkout v25.12.5
 
-# 全部改为稳定的 github 源
-sed -i 's|https://git.openwrt.org/feed/packages.git|https://github.com/openwrt/packages.git|g' feeds.conf.default
-sed -i 's|https://git.openwrt.org/project/luci.git|https://github.com/openwrt/luci.git|g' feeds.conf.default
+# 改为 openwrt 的 packages
+sed -i 's|^src-git packages https://git.openwrt.org/feed/packages.*|src-git packages https://github.com/openwrt/packages.git;openwrt-25.12|' feeds.conf.default
+
+# 改为 openwrt 的 luci
+sed -i 's|^src-git luci https://git.openwrt.org/project/luci.*|src-git luci https://github.com/openwrt/luci.git;openwrt-25.12|' feeds.conf.default
+
+# 其余改为稳定的 github 源
 sed -i 's|https://git.openwrt.org/feed/routing.git|https://github.com/openwrt/routing.git|g' feeds.conf.default
 sed -i 's|https://git.openwrt.org/feed/telephony.git|https://github.com/openwrt/telephony.git|g' feeds.conf.default
 
